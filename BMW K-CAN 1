@@ -1,0 +1,412 @@
+# K-CAN 1
+For: E89, E65, others
+
+ID (Dec)	ID (Hex)	Description	Diag ID (Dec)	Diag ID (Hex)	SG Name
+    168	0xA8	Torque 1 K-CAN [10]	18	0x12	DME1/DDE1
+    169	0xA9	Torque 2 (10)	18	0x12	DME1/DDE1
+    170	0xAA	Torque 3 K-CAN [10]	18	0x12	DME1/DDE1
+    172	0xAC	Wheel torque drive train 2 [5]	18	0x12	DME1/DDE1
+    173	0xAD	Delay request ACC [9]	28	0x1C	LDM
+    173	0xAD	Delay request ACC [9]	33	0x21	ACC_Modul/ACC+NAVI
+    179	0xB3	Steering support control [2]	22	0x16	AFS
+    180	0xB4	Wheel torque drive train 1 [4]	18	0x12	DME1/DDE1
+    181	0xB5	Torque requirement EGS [9]	24	0x18	EGS_MECH+NAVI/EGS_MECH
+    182	0xB6	Torque request DSC [7]	41	0x29	DXC_RB/DSC_RB/DSC_CT
+    183	0xB7	Torque request ACC [10]	28	0x1C	LDM
+    183	0xB7	Torque request ACC [10]	33	0x21	ACC_Modul/ACC+NAVI
+    184	0xB8	Torque requirement DKG [2]	24	0x18	DKG
+    185	0xB9	Torque request AFS [3]	22	0x16	AFS
+    186	0xBA	Gearbox data [20]	24	0x18	SMG_M/SMG/EGS_MECH+NAVI/EGS_MECH/DKG
+    187	0xBB	Target torque request [7]	41	0x29	DXC_RB
+    188	0xBC	Status of target torque conversion [7]	25	0x19	VGSG
+    189	0xBD	Torque request SSG [6]	24	0x18	SMG_M/SMG
+    190	0xBE	Alive counter [12]	35	0x23	ARS_Modul
+    191	0xBF	Wheel torque requirement for drive train [6]	28	0x1C	LDM
+    192	0xC0	Alive Central Gateway [1]	0	0x0	KGM
+    193	0xC1	Alive Counter Phone [3]	54	0x36	TEL_JAP/TEL_BPI
+    196	0xC4	Steering wheel angle K-CAN [13]	41	0x29	DXC_RB/DSC_RB/DSC_CT
+    200	0xC8	Steering wheel angle top K-CAN [6]	2	0x2	SZL_LWS
+    206	0xCE	Wheel speed K-CAN [4]	41	0x29	DXC_RB/DSC_RB/DSC_CT
+    210	0xD2	Operation of seat adjustment BF [6]	101	0x65	SZM_MIT_KBUS/SZM
+    213	0xD5	Wheel torque brake requirement [6]	28	0x1C	LDM
+    215	0xD7	Alive counter security [2]	1	0x1	ACSM
+    218	0xDA	Operation of seat adjustment FA [6]	101	0x65	SZM_MIT_KBUS/SZM
+    225	0xE1	Wheel torque brake [3]	41	0x29	DXC_RB/DSC_RB
+    226	0xE2	Status of central locking BFT [11]	0	0x0	KGM
+    230	0xE6	Status of central locking BFTH [11]	114	0x72	KBM
+    234	0xEA	Central locking status FAT [11]	0	0x0	KGM
+    238	0xEE	Central locking status FATH [11]	114	0x72	KBM
+    242	0xF2	Central locking status HK [13]	114	0x72	KBM
+    246	0xF6	Exterior mirror control [9]	0	0x0	KGM
+    250	0xFA	Window lifter control FAT [10]	0	0x0	KGM
+    251	0xFB	BFT window regulator control [5]	0	0x0	KGM
+    252	0xFC	FATH window regulator control [5]	114	0x72	KBM
+    253	0xFD	BFTH window regulator control [5]	114	0x72	KBM
+    304	0x130	Terminal status [19]	64	0x40	CAS
+    309	0x135	Crash shutdown control EKP [1]	1	0x1	ACSM
+    351	0x15F	Requirement angle FFP [6]	28	0x1C	LDM
+    370	0x172	Acknowledgment request combination [1]	98	0x62	M_ASK/CCC_GW
+    400	0x190	Display ACC [13]	28	0x1C	LDM
+    400	0x190	Display ACC [13]	33	0x21	ACC_Modul/ACC+NAVI
+    402	0x192	Operation of the gear selector switch [16]	2	0x2	SZL_LWS
+    403	0x193	ACC DCC display [4]	28	0x1C	LDM
+    404	0x194	Cruise control/ACC operation [13]	2	0x2	SZL_LWS
+    408	0x198	Operation of gear selector switch 2 [2]	94	0x5E	GWS
+    414	0x19E	Status DSC K-CAN [19]	41	0x29	DXC_RB/DSC_RB/DSC_CT
+    416	0x1A0	Speed K-CAN [14]	41	0x29	DXC_RB/DSC_RB/DSC_CT
+    418	0x1A2	Gearbox data 2 [6]	24	0x18	EGS_MECH+NAVI/EGS_MECH/DKG
+    419	0x1A3	Raw data longitudinal acceleration [3]	24	0x18	SMG_M
+    422	0x1A6	Distance [6]	41	0x29	DXC_RB/DSC_RB/DSC_CT
+    426	0x1AA	Effect ErgoCommander [10]	98	0x62	M_ASK/CCC_GW
+    428	0x1AC	Status ARS module [13]	35	0x23	ARS_Modul
+    436	0x1B4	Status station wagon [14]	96	0x60	Kombi
+    437	0x1B5	Heat flow/load moment climate [14]	120	0x78	IHKA
+    438	0x1B6	Heat flow engine [11]	18	0x12	DME1/DDE1
+    440	0x1B8	Operation ErgoCommander [6]	103	0x67	ZBE_LO/ZBE
+    450	0x1C2	Distance message PDC [5]	100	0x64	PDC
+    451	0x1C3	Distance message 2 PDC [3]	100	0x64	PDC
+    454	0x1C6	Acoustic message PDC [5]	100	0x64	PDC
+    464	0x1D0	Motor data [13]	18	0x12	DME1/DDE1
+    466	0x1D2	Display transmission data [22]	24	0x18	SMG_M/SMG/EGS_MECH+NAVI/EGS_MECH/DKG
+    470	0x1D6	Operation audio/telephone button [12]	2	0x2	SZL_LWS
+    472	0x1D8	Operation air conditioning air distribution FA [13]	98	0x62	M_ASK/CCC_GW
+    473	0x1D9	Operation of the M-Drive button [2]	2	0x2	SZL_LWS
+    474	0x1DA	Air conditioning remote control [5]	64	0x40	CAS
+    476	0x1DC	Operation layering seat heating [1]	98	0x62	M_ASK/CCC_GW
+    480	0x1E0	Operation air conditioning air distribution BF [7]	98	0x62	M_ASK/CCC_GW
+    482	0x1E2	Operation climate front [11]	98	0x62	M_ASK/CCC_GW
+    487	0x1E7	Operation of seat heating/seat climate FA [7]	101	0x65	SZM_MIT_KBUS/SZM
+    488	0x1E8	Operation of seat heating/seat climate BF [7]	101	0x65	SZM_MIT_KBUS/SZM
+    490	0x1EA	Operating the steering column adjustment [5]	2	0x2	SZL_LWS
+    491	0x1EB	Operation of active seat FA [3]	101	0x65	SZM_MIT_KBUS/SZM
+    492	0x1EC	Operation of active seat BF [3]	101	0x65	SZM_MIT_KBUS/SZM
+    493	0x1ED	Operation backrest width adjustment Active FA [2]	101	0x65	SZM_MIT_KBUS/SZM
+    494	0x1EE	Operation of the steering column button [6]	2	0x2	SZL_LWS
+    495	0x1EF	Operation backrest width adjustment Active BF [2]	101	0x65	SZM_MIT_KBUS/SZM
+    498	0x1F2	Operation of seat memory BF [3]	101	0x65	SZM_MIT_KBUS/SZM
+    499	0x1F3	Operation of seat memory FA [4]	101	0x65	SZM_MIT_KBUS/SZM
+    500	0x1F4	Remote control seat memory BF [2]	255	0xFF	unbekannt
+    502	0x1F6	Flashing [6]	112	0x70	LM
+    508	0x1FC	Status AFS [4]	22	0x16	AFS
+    510	0x1FE	crash [12]	1	0x1	ACSM
+    512	0x200	Control speed step cruise control [7]	18	0x12	DME1/DDE1
+    514	0x202	Dimming [10]	112	0x70	LM
+    517	0x205	Acoustic requirements station wagon [3]	96	0x60	Kombi
+    518	0x206	Control display shift lights [1]	18	0x12	DME1
+    523	0x20B	Memory adjustment [6]	101	0x65	SZM_MIT_KBUS
+    523	0x20B	Memory adjustment [6]	109	0x6D	SM_FA
+    524	0x20C	Steering column control (4)	109	0x6D	SM_FA
+    525	0x20D	Position steering column (5)	101	0x65	SZM_MIT_KBUS/SZM
+    528	0x210	Operation HUD [7]	98	0x62	M_ASK/CCC_GW
+    529	0x211	Status HUD [7]	61	0x3D	HUD
+    530	0x212	Height levels air spring [8]	56	0x38	EHC
+    538	0x21A	Lamp status [13]	112	0x70	LM
+    540	0x21C	Operation Night Vision [2]	98	0x62	CCC_GW
+    542	0x21E	Status Night Vision [2]	87	0x57	NVC
+    550	0x226	Rain sensor wiper speed [8]	69	0x45	RLS
+    550	0x226	Rain sensor wiper speed [8]	112	0x70	LM
+    552	0x228	Operation special function [8]	98	0x62	M_ASK/CCC_GW
+    552	0x228	Operation special function [8]	99	0x63	CCC_MM
+    554	0x22A	Status BFS [10]	110	0x6E	SM_BF
+    558	0x22E	BFSH status [7]	255	0xFF	unbekannt
+    562	0x232	Status FAS [10]	109	0x6D	SM_FA
+    566	0x236	Status FASH [7]	255	0xFF	unbekannt
+    567	0x237	Status backrest width adjustment active BF [3]	90	0x5A	aLBV_BF
+    569	0x239	Status backrest width adjustment active FA [3]	89	0x59	aLBV_FA
+    570	0x23A	Radio key status [13]	64	0x40	CAS
+    571	0x23B	Status climate front extended [1]	120	0x78	IHKA
+    572	0x23C	Status operation seating comfort FA [1]	109	0x6D	SM_FA
+    575	0x23F	Status operation seating comfort BF [1]	110	0x6E	SM_BF
+    578	0x242	Status climate front [11]	120	0x78	IHKA
+    586	0x24A	Status PDC [6]	100	0x64	PDC
+    594	0x252	Wiper status [8]	114	0x72	KBM
+    598	0x256	Challenge Passive Access [10]	64	0x40	CAS
+    600	0x258	Status Transmission Passive Access [4]	39	0x27	PGS
+    604	0x25C	Operation of additional climate programs [2]	98	0x62	M_ASK/CCC_GW
+    619	0x26B	Operation of roller blinds BF [2]	255	0xFF	unbekannt
+    620	0x26C	Operation of roller blinds FA [2]	0	0x0	KGM
+    621	0x26D	Operation of roller blinds MK [1]	255	0xFF	unbekannt
+    622	0x26E	Control FH/SHD central (comfort) [10]	64	0x40	CAS
+    623	0x26F	Operation of roller blinds BFH [2]	255	0xFF	unbekannt
+    624	0x270	Operation of roller blinds FAH [2]	255	0xFF	unbekannt
+    632	0x278	Navigation graph [3]	98	0x62	CCC_GW
+    634	0x27A	Synchronization navigation graph [4]	98	0x62	CCC_GW
+    638	0x27E	Status convertible top [7]	36	0x24	CVM_V
+    644	0x284	Control remote start security vehicle [8]	64	0x40	CAS
+    645	0x285	Control roller blinds [3]	101	0x65	SZM_MIT_KBUS/SZM
+    652	0x28C	Operation of the vertical dynamics button [2]	94	0x5E	GWS
+    656	0x290	Control reaction hydrogen vehicle [1]	255	0xFF	unbekannt
+    658	0x292	Control high beam assistant [2]	95	0x5F	FLA
+    671	0x29F	Remote control Rear Commander [5]	64	0x40	CAS
+    672	0x2A0	Central locking control [10]	64	0x40	CAS
+    674	0x2A2	Operation of the climate stand functions [5]	98	0x62	M_ASK/CCC_GW
+    676	0x2A4	Operation Personalization [8]	98	0x62	M_ASK/CCC_GW
+    678	0x2A6	Operation of wiper button [12]	2	0x2	SZL_LWS
+    690	0x2B2	Wheel pressures K-CAN [1]	41	0x29	DXC_RB/DSC_RB/DSC_CT
+    691	0x2B3	Acceleration data [2]	41	0x29	DXC_RB/DSC_RB/DSC_CT
+    692	0x2B4	DWA alarm [4]	65	0x41	DWA
+    694	0x2B6	Horn control DWA [3]	65	0x41	DWA
+    696	0x2B8	Operation on-board computer [3]	98	0x62	M_ASK/CCC_GW
+    698	0x2BA	Stopwatch (3)	96	0x60	Kombi
+    704	0x2C0	LCD luminance [7]	96	0x60	Kombi
+    714	0x2CA	Outside temperature [9]	96	0x60	Kombi
+    718	0x2CE	Monitor control [4]	98	0x62	M_ASK/CCC_GW
+    725	0x2D5	Status heating rear window [1]	120	0x78	IHKA
+    730	0x2DA	Tailgate lift status [2]	107	0x6B	HKL
+    738	0x2E2	Status setting video night vision [1]	87	0x57	NVC
+    740	0x2E4	Status followers (8)	113	0x71	AHM
+    742	0x2E6	Status climate air distribution FA [13]	120	0x78	IHKA
+    746	0x2EA	Status climate air distribution BF [9]	120	0x78	IHKA
+    748	0x2EC	Status climate SH/ZH additional water pump [14]	122	0x7A	SH_ZH
+    750	0x2EE	Status climate additional programs [2]	120	0x78	IHKA
+    752	0x2F0	Status climate stand functions [12]	120	0x78	IHKA
+    756	0x2F4	Air conditioning control SH/ZH additional water pump [13]	120	0x78	IHKA
+    758	0x2F6	Light control [7]	114	0x72	KBM
+    759	0x2F7	Units [10]	98	0x62	M_ASK/CCC_GW
+    759	0x2F7	Units [10]	99	0x63	CCC_MM
+    760	0x2F8	Time/Date [12]	96	0x60	Kombi
+    762	0x2FA	Seat occupancy, belt contacts (14)	1	0x1	ACSM
+    764	0x2FC	ZV and valve status [11]	64	0x40	CAS
+    772	0x304	Status gear [13]	24	0x18	SMG_M/SMG/EGS_MECH+NAVI/EGS_MECH/DKG
+    774	0x306	Vehicle tilt [2]	112	0x70	LM
+    776	0x308	Status MSA [2]	18	0x12	DME1/DDE1
+    784	0x310	Outside temperature/relative time [10]	96	0x60	Kombi
+    785	0x311	Refueling quantity [3]	96	0x60	Kombi
+    786	0x312	Service Call Teleservice [2]	96	0x60	Kombi
+    787	0x313	Status Service Call Teleservice [3]	54	0x36	TEL_BPI
+    787	0x313	Status Service Call Teleservice [3]	98	0x62	M_ASK/CCC_GW
+    788	0x314	Driving light status [9]	69	0x45	RLS
+    788	0x314	Driving light status [9]	112	0x70	LM
+    789	0x315	Vehicle mode [7]	101	0x65	SZM_MIT_KBUS/SZM
+    791	0x317	Operation of the PDC button [1]	101	0x65	SZM_MIT_KBUS/SZM
+    792	0x318	Status antenna passive access [7]	39	0x27	PGS
+    793	0x319	Operation RDC button [4]	101	0x65	SZM
+    796	0x31C	Tire pressure status [6]	32	0x20	RDC
+    797	0x31D	Tire puncture indicator status [6]	41	0x29	DXC_RB/DSC_RB/DSC_CT
+    802	0x322	Damper current [2]	57	0x39	EDCK_Modul
+    806	0x326	Status damper program [9]	57	0x39	EDCK_Modul
+    808	0x328	Relative time [9]	96	0x60	Kombi
+    810	0x32A	ALC control [2]	112	0x70	LM
+    813	0x32D	Display HDC [3]	41	0x29	DXC_RB
+    814	0x32E	Status climate internal rule info [6]	120	0x78	IHKA
+    816	0x330	Mileage/Range [5]	96	0x60	Kombi
+    817	0x331	Programming step cruise control [2]	98	0x62	M_ASK/CCC_GW
+    818	0x332	Driver display speed range [4]	18	0x12	DME1/DDE1
+    821	0x335	Electric fuel pump status [3]	23	0x17	EKP
+    822	0x336	Display check control message (role) [3]	96	0x60	Kombi
+    823	0x337	Status fuel control DME [1]	18	0x12	DME1
+    824	0x338	Control display check control message [7]	96	0x60	Kombi
+    825	0x339	Status display functions external [1]	98	0x62	M_ASK/CCC_GW
+    826	0x33A	Status monitor front [3]	115	0x73	CID_C_H/CID_C
+    840	0x348	Compliance navigation graph [4]	98	0x62	CCC_GW
+    842	0x34A	Navigation GPS 1 [5]	98	0x62	CCC_GW
+    843	0x34B	Seat back lock status FA (3)	101	0x65	SZM_MIT_KBUS
+    843	0x34B	Seat back lock status FA (3)	109	0x6D	SM_FA
+    844	0x34C	Navigation GPS 2 [5]	98	0x62	CCC_GW
+    845	0x34D	Status of seat back lock BF [2]	101	0x65	SZM_MIT_KBUS
+    845	0x34D	Status of seat back lock BF [2]	110	0x6E	SM_BF
+    846	0x34E	Navigation system information [6]	98	0x62	CCC_GW
+    858	0x35A	Appointment Condition Based Service [2]	98	0x62	M_ASK/CCC_GW
+    860	0x35C	Status on-board computer [5]	96	0x60	Kombi
+    862	0x35E	On-board computer data (travel data) [5]	96	0x60	Kombi
+    864	0x360	Data on-board computer (start of journey) [2]	96	0x60	Kombi
+    866	0x362	Data on-board computer (average values) [4]	96	0x60	Kombi
+    868	0x364	Data on-board computer (arrival) [2]	96	0x60	Kombi
+    870	0x366	Display combination/external display [3]	96	0x60	Kombi
+    871	0x367	Control display demand-oriented service [6]	96	0x60	Kombi
+    884	0x374	Wheel tolerance adjustment [7]	41	0x29	DXC_RB/DSC_RB/DSC_CT
+    886	0x376	Status of wear of the slat [3]	25	0x19	VGSG
+    896	0x380	Chassis number [5]	64	0x40	CAS
+    897	0x381	Electronic engine oil dipstick [10]	18	0x12	DME1/DDE1
+    898	0x382	Electronic engine oil dipstick M [1]	18	0x12	DME1/DDE1
+    904	0x388	Vehicle type [13]	64	0x40	CAS
+    910	0x38E	Starting speed [1]	18	0x12	DME1/DDE1
+    916	0x394	RDA request/data storage [5]	96	0x60	Kombi
+    917	0x395	Coding power management [2]	64	0x40	CAS
+    920	0x398	Operating the chassis [14]	98	0x62	M_ASK/CCC_GW
+    921	0x399	Status M-Drive [2]	18	0x12	DME1
+    924	0x39C	EBA data request [5]	255	0xFF	unbekannt
+    926	0x39E	Operation time/date [1]	98	0x62	M_ASK/CCC_GW
+    928	0x3A0	Vehicle condition [4]	0	0x0	KGM
+    931	0x3A3	Request Remote Services [2]	98	0x62	M_ASK/CCC_GW
+    940	0x3AC	Follow-up time terminal 30 error-controlled [2]	0	0x0	KGM
+    944	0x3B0	Status gear reverse [2]	112	0x70	LM
+    945	0x3B1	Gearbox data 3 [2]	24	0x18	EGS_MECH/DKG
+    947	0x3B3	Power management consumer control [8]	18	0x12	DME1/DDE1
+    948	0x3B4	Power management battery voltage [11]	18	0x12	DME1/DDE1
+    949	0x3B5	Water valve status [6]	120	0x78	IHKA
+    950	0x3B6	Window regulator position FAT [6]	0	0x0	KGM
+    951	0x3B7	Window regulator position FATH [5]	114	0x72	KBM
+    952	0x3B8	Window regulator position BFT [6]	0	0x0	KGM
+    953	0x3B9	Window regulator position BFTH [5]	114	0x72	KBM
+    954	0x3BA	Position SHD[10]	68	0x44	SHD/MDS
+    957	0x3BD	Status consumer shutdown [2]	114	0x72	KBM
+    958	0x3BE	Power supply follow-up time [5]	64	0x40	CAS
+    959	0x3BF	Rear window window regulator position [1]	36	0x24	CVM_V
+    960	0x3C0	Configuration FAS [3]	109	0x6D	SM_FA
+    961	0x3C1	Configuration BFS [3]	110	0x6E	SM_BF
+    970	0x3CA	Configuration M-Drive [2]	98	0x62	M_ASK/CCC_GW
+    979	0x3D3	Solar sensor status [1]	112	0x70	LM
+    980	0x3D4	Configuration of central locking CKM [3]	98	0x62	M_ASK/CCC_GW
+    981	0x3D5	Status of central locking CKM [4]	64	0x40	CAS
+    982	0x3D6	Configuration DWA CKM [1]	98	0x62	M_ASK/CCC_GW
+    983	0x3D7	Status DWA CKM [2]	65	0x41	DWA
+    984	0x3D8	Configuration RLS CKM [3]	98	0x62	M_ASK/CCC_GW
+    985	0x3D9	Status RLS CKM [4]	69	0x45	RLS
+    985	0x3D9	Status RLS CKM [4]	112	0x70	LM
+    986	0x3DA	Configuration memory positions CKM [1]	98	0x62	M_ASK/CCC_GW
+    987	0x3DB	Status memory positions CKM [3]	101	0x65	SZM_MIT_KBUS
+    987	0x3DB	Status memory positions CKM [3]	109	0x6D	SM_FA
+    988	0x3DC	Configuration light CKM [3]	98	0x62	M_ASK/CCC_GW
+    989	0x3DD	Status light CKM [4]	112	0x70	LM
+    990	0x3DE	Configuration climate CKM [5]	98	0x62	M_ASK/CCC_GW
+    991	0x3DF	Status climate CKM [6]	120	0x78	IHKA
+    992	0x3E0	Configuration ALC CKM [1]	98	0x62	M_ASK/CCC_GW
+    993	0x3E1	Status ALC CKM [1]	112	0x70	LM
+    994	0x3E2	Configuration tailgate CKM [1]	98	0x62	M_ASK/CCC_GW
+    995	0x3E3	Status tailgate CKM [1]	107	0x6B	HKL
+    1001	0x3E9	Marker 1 [1]	255	0xFF	unbekannt
+    1002	0x3EA	Marker 2 [3]	126	0x7E	Diagnosetool_K_CAN_System
+    1003	0x3EB	Marker 3 [1]	125	0x7D	Diagnosetool_PT_CAN
+    1006	0x3EE	Request error message [1]	255	0xFF	unbekannt
+    1007	0x3EF	OBD data engine (3)	18	0x12	DME1/DDE1
+    1008	0x3F0	Configuration Light Advanced CKM [1]	98	0x62	M_ASK/CCC_GW
+    1009	0x3F1	Status Light Advanced CKM [1]	112	0x70	LM
+    1012	0x3F4	Configuration of load compartment cover CKM [1]	98	0x62	M_ASK/CCC_GW
+    1013	0x3F5	Status of load compartment cover CKM [1]	114	0x72	KBM
+    1022	0x3FE	Request CAN_Testtool SI-Bus [5]	126	0x7E	Diagnosetool_K_CAN_System
+    1280	0x500	Data transfer [1]	112	0x70	LM
+    1280	0x500	Data transfer [1]	120	0x78	IHKA
+    1984	0x7C0	CAS programming end of tape 1 (3)	64	0x40	CAS
+    1985	0x7C1	CAS programming end of tape 2 (3)	255	0xFF	TOOL_BANDENDE_CAS
+    1986	0x7C2	CAS application message 1 (3)	64	0x40	CAS
+    1987	0x7C3	CAS application message 2 (3)	255	0xFF	TOOL_BANDENDE_CAS
+    1152	0x480	Network management	0	0x0	KGM
+    1153	0x481	Network management	1	0x1	ACSM
+    1154	0x482	Network management	2	0x2	SZL_LWS
+    1170	0x492	Network management	18	0x12	DDE1/DME1
+    1174	0x496	Network management	22	0x16	AFS
+    1175	0x497	Network management	23	0x17	EKP
+    1176	0x498	Network management	24	0x18	DKG/EGS_MECH/EGS_MECH+NAVI/SMG/SMG_M
+    1177	0x499	Network management	25	0x19	VGSG
+    1179	0x49B	Network management	27	0x1B	VVT1
+    1180	0x49C	Network management	28	0x1C	LDM
+    1182	0x49E	Network management	30	0x1E	VVT2
+    1184	0x4A0	Network management	32	0x20	RDC
+    1185	0x4A1	Network management	33	0x21	ACC+NAVI/ACC_Modul
+    1187	0x4A3	Network management	35	0x23	ARS_Modul
+    1188	0x4A4	Network management	36	0x24	CVM_V
+    1189	0x4A5	Network management	37	0x25	RSC_VDA/SC_CT/SC_VDA
+    1191	0x4A7	Network management	39	0x27	PGS
+    1193	0x4A9	Network management	41	0x29	DSC_CT/DSC_RB/DXC_RB
+    1206	0x4B6	Network management	54	0x36	TEL_BPI/TEL_JAP/TEL_MULF
+    1207	0x4B7	Network management	55	0x37	AMP_TOP
+    1208	0x4B8	Network management	56	0x38	EHC
+    1209	0x4B9	Network management	57	0x39	EDCK_Modul
+    1210	0x4BA	Network management	58	0x3A	KHM
+    1211	0x4BB	Network management	59	0x3B	JNAV
+    1212	0x4BC	Network management	60	0x3C	CDC
+    1213	0x4BD	Network management	61	0x3D	HUD
+    1216	0x4C0	Network management	64	0x40	CAS
+    1217	0x4C1	Network management	65	0x41	DWA
+    1220	0x4C4	Network management	68	0x44	MDS/SHD
+    1221	0x4C5	Network management	69	0x45	RLS/RLS
+    1227	0x4CB	Network management	75	0x4B	VM
+    1232	0x4D0	Network management	80	0x50	Notstrom-Sirene
+    1235	0x4D3	Network management	83	0x53	IBOC
+    1236	0x4D4	Network management	84	0x54	SDARS
+    1237	0x4D5	Network management	85	0x55	ISpeechBox
+    1239	0x4D7	Network management	87	0x57	NVC
+    1241	0x4D9	Network management	89	0x59	aLBV_FA
+    1242	0x4DA	Network management	90	0x5A	aLBV_BF
+    1243	0x4DB	Network management	91	0x5B	DAB
+    1244	0x4DC	Network management	92	0x5C	Behoerde
+    1245	0x4DD	Network management	93	0x5D	TLC
+    1246	0x4DE	Network management	94	0x5E	GWS
+    1247	0x4DF	Network management	95	0x5F	FLA
+    1248	0x4E0	Network management	96	0x60	Kombi
+    1250	0x4E2	Network management	98	0x62	CCC_GW/M_ASK
+    1251	0x4E3	Network management	99	0x63	CCC_MM
+    1252	0x4E4	Network management	100	0x64	PDC
+    1253	0x4E5	Network management	101	0x65	SZM/SZM_MIT_KBUS
+    1255	0x4E7	Network management	103	0x67	ZBE/ZBE_LO
+    1259	0x4EB	Network management	107	0x6B	HKL
+    1261	0x4ED	Network management	109	0x6D	SM_FA/SM_FA_KBUS
+    1262	0x4EE	Network management	110	0x6E	SM_BF/SM_BF_KBUS
+    1264	0x4F0	Network management	112	0x70	LM/LM_ALC
+    1265	0x4F1	Network management	113	0x71	AHM
+    1266	0x4F2	Network management	114	0x72	KBM
+    1267	0x4F3	Network management	115	0x73	CID_C/CID_C_H
+    1272	0x4F8	Network management	120	0x78	IHKA
+    1274	0x4FA	Network management	122	0x7A	SH_ZH
+    1277	0x4FD	Network management	125	0x7D	Diagnosetool_PT_CAN
+    1278	0x4FE	Network management	126	0x7E	Diagnosetool_K_CAN_System
+    1289	0x509	Network management	137	0x89	Xenon_Scheinwerfer_Links_ALC
+    1290	0x50A	Network management	138	0x8A	Xenon_Scheinwerfer_Rechts_ALC
+    1291	0x50B	Network management	139	0x8B	CNV
+    1393	0x571	Network management	241	0xF1	Diagnosedose
+    1408	0x580	services	0	0x0	KGM
+    1409	0x581	services	1	0x1	ACSM
+    1410	0x582	services	2	0x2	SZL_LWS
+    1426	0x592	services	18	0x12	DDE1/DME1
+    1430	0x596	services	22	0x16	AFS
+    1431	0x597	services	23	0x17	EKP
+    1432	0x598	services	24	0x18	DKG/EGS_MECH/EGS_MECH+NAVI/SMG/SMG_M
+    1433	0x599	services	25	0x19	VGSG
+    1435	0x59B	services	27	0x1B	VVT1
+    1436	0x59C	services	28	0x1C	LDM
+    1438	0x59E	services	30	0x1E	VVT2
+    1440	0x5A0	services	32	0x20	RDC
+    1441	0x5A1	services	33	0x21	ACC+NAVI/ACC_Modul
+    1443	0x5A3	services	35	0x23	ARS_Modul
+    1444	0x5A4	services	36	0x24	CVM_V
+    1445	0x5A5	services	37	0x25	RSC_VDA/SC_CT/SC_VDA
+    1447	0x5A7	services	39	0x27	PGS
+    1449	0x5A9	services	41	0x29	DSC_CT/DSC_RB/DXC_RB
+    1462	0x5B6	services	54	0x36	TEL_BPI/TEL_JAP/TEL_MULF
+    1463	0x5B7	services	55	0x37	AMP_TOP
+    1464	0x5B8	services	56	0x38	EHC
+    1465	0x5B9	services	57	0x39	EDCK_Modul
+    1466	0x5BA	services	58	0x3A	KHM
+    1467	0x5BB	services	59	0x3B	JNAV
+    1468	0x5BC	services	60	0x3C	CDC
+    1469	0x5BD	services	61	0x3D	HUD
+    1472	0x5C0	services	64	0x40	CAS
+    1473	0x5C1	services	65	0x41	DWA
+    1476	0x5C4	services	68	0x44	MDS/SHD
+    1477	0x5C5	services	69	0x45	RLS/RLS
+    1483	0x5CB	services	75	0x4B	VM
+    1488	0x5D0	services	80	0x50	Notstrom-Sirene
+    1491	0x5D3	services	83	0x53	IBOC
+    1492	0x5D4	services	84	0x54	SDARS
+    1493	0x5D5	services	85	0x55	ISpeechBox
+    1495	0x5D7	services	87	0x57	NVC
+    1497	0x5D9	services	89	0x59	aLBV_FA
+    1498	0x5DA	services	90	0x5A	aLBV_BF
+    1499	0x5DB	services	91	0x5B	DAB
+    1500	0x5DC	services	92	0x5C	Behoerde
+    1501	0x5DD	services	93	0x5D	TLC
+    1502	0x5DE	services	94	0x5E	GWS
+    1503	0x5DF	services	95	0x5F	FLA
+    1504	0x5E0	services	96	0x60	Kombi
+    1506	0x5E2	services	98	0x62	CCC_GW/M_ASK
+    1507	0x5E3	services	99	0x63	CCC_MM
+    1508	0x5E4	services	100	0x64	PDC
+    1509	0x5E5	services	101	0x65	SZM/SZM_MIT_KBUS
+    1511	0x5E7	services	103	0x67	ZBE/ZBE_LO
+    1515	0x5EB	services	107	0x6B	HKL
+    1517	0x5ED	services	109	0x6D	SM_FA/SM_FA_KBUS
+    1518	0x5EE	services	110	0x6E	SM_BF/SM_BF_KBUS
+    1520	0x5F0	services	112	0x70	LM/LM_ALC
+    1521	0x5F1	services	113	0x71	AHM
+    1522	0x5F2	services	114	0x72	KBM
+    1523	0x5F3	services	115	0x73	CID_C/CID_C_H
+    1528	0x5F8	services	120	0x78	IHKA
+    1530	0x5FA	services	122	0x7A	SH_ZH
+    1533	0x5FD	services	125	0x7D	Diagnosetool_PT_CAN
+    1534	0x5FE	services	126	0x7E	Diagnosetool_K_CAN_System
+    1545	0x609	services	137	0x89	Xenon_Scheinwerfer_Links_ALC
+    1546	0x60A	services	138	0x8A	Xenon_Scheinwerfer_Rechts_ALC
+    1547	0x60B	services	139	0x8B	CNV
+    1649	0x671	services	241	0xF1	Diagnosedose
+    4095	0xFFF	unknown	255	0xFF	Sender unbekannt
