@@ -1,0 +1,59 @@
+panamera ids in dec
+780 - AEB
+781 - PBrake
+784 - launch control/transmission?
+796 - makes boost thing orange
+797 - e-drive?
+867 - directionals
+899/900 - spoiler failure
+908 - abs/tc
+byte 0 - pdcc/pasm fault
+byte 4 - abs/tc/tc_off/brake light/brake force distr./brake pad icon/psm on-off/
+bit 1 - blinking tc + roll mode active
+bit 2 - psm failure + tc light on
+bit 3 - tc off
+bit 4 - tc blinking
+bit 5 - abs/psm failure
+bit 6 - 
+bit 7 - 
+bit 8 - brake force distr.
+byte 5 - psm in diag/hold/all lights/
+byte 6 - allwheel dr sys fail
+909 - aes or soemething
+910 - awd?
+917 - headlights something
+64 - seatbelt/airbag
+1009 - tpms
+1088 - e-op messages
+1092 - sos system, trunk open
+1137 - check brakelight
+1314 - engine control fault, oil pressure, boost gauge
+1326 - battery messages
+
+1337 - speed limit, compass
+1413 - park brake fault, speed limite exceeded
+1424/0x58f - trip computer scroll, replace key battery
+1514 - level control
+1516 - doors
+1605 - highbeam assistant not available
+1633 - trailer lights
+1634 - lights status hughbeam, parking lights, foglights, hood open
+1635 - battery discharged, generator fault
+1652 - TPMS
+1655 - sport mode
+1697 - parking light on/ bulb out faults
+1702 - wiper faulty
+1714 - set date and time
+15 21 3a 3c 9a 59 2d 68 - 9:22 pm
+15 02 8a 71 0d 53 66 a9 - 6:02 am
+15 4d c1 15 b4 39 c2 1c - 3:33 am
+0x4d,0x10,0x10,0x33,0x33,0x33,0x33 - 7:25 pm
+0x4d,0x10,0x10,0x33,0x33,0x34,0x34 - 3:26 am
+0x4d,0x10,0x10,0x33,0x33,0x34,0x37 - 3:26 am
+0x4d,0x10,0x10,0x33,0x33,0x35,0x47 - 7:26 pm
+1721 - cornering light fault
+1717 - oil level fault
+1314 bits
+low > high
+x x x x x x x x
+boost_0-19 boost_0-9 boost_0-5 boost_0-2 boost_0-1 boost_0-1 ? ?
