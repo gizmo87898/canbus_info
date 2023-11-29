@@ -1,0 +1,13 @@
+honda crz hybrid cluster highspeed bus bruteforce
+57 = airbag
+344 - speed
+358 - IMA
+380 - cruise control
+398 - powersteering
+401 - gear
+420/421 - tc
+463 - hybrud status
+476/477 - rpm
+614 maybe
+800 - messaes
+804 - service???????????
