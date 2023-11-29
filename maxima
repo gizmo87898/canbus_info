@@ -1,0 +1,23 @@
+maxima 2018
+2a/2b - airbag/seatbelt
+180 - rpm
+284 - speed (byte 4 and 5)
+2b1 - cruise control, lane depart, emergency brake assist, blind spot monitor, backup assist
+351 - push brake to start, key error, a lot
+354 - trac ctrl, brake, abs
+358 - tpms light, trunk open, oil pressure
+385 - tire pressures
+3ec - also rpm, key no 1 detected
+421 - gear indicator
+4cc - driver attention alert
+4e7 - made it beep but no message
+54c - outside temp
+551 - cruise control, eng temp, MIL
+56c - chassis control system error
+57a - parking sensors
+580 - loose fuel cap, oil pressure light
+5b0 - sport mode
+5c3 - cruise control + LDA unavailable
+5e4 - power steering light
+60d - parking lights, foglights, highbeam
+ww
