@@ -1,0 +1,9 @@
+561 - cruise status
+592 - beeping
+595 - at oil temp, gear
+819 - tc, abs
+849 - highbeams, beeping, parking lights
+1074 - fog lights, beeping, door status, messages on screen
+1105 - oil level/temp? light directly left of abs
+1201 - rollback light thing
+
